@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Topic: {{topic}}</h2>
+    <h3>Question {{qIndex}}</h3>
+    <p>{{question}}</p>
+
+    <form method="post" action="/quiz">
+        {{options}}
+        <input type="hidden" name="username" value="{{username}}">
+        <input type="hidden" name="topic" value="{{topic}}">
+        <input type="hidden" name="qIndex" value="{{qIndex}}">
+        <input type="hidden" name="score" value="{{score}}">
+        <br>
+        <button type="submit">{{buttonText}}</button>
+    </form>
+</body>
+</html>
